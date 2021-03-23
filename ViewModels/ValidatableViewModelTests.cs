@@ -18,7 +18,7 @@ namespace Energetic.Clients.ViewModels.Tests
             var fakeCommandFactory = CreateFakeCommandFactory();
             var action = new Action(() =>
             {
-                var sut = new TestViewModel(fakeCommandFactory, null);
+                var sut = new TestViewModel(fakeCommandFactory, null!);
             });
 
             // Act and Assert
@@ -84,6 +84,6 @@ namespace Energetic.Clients.ViewModels.Tests
         {
         }
 
-        public string TestProperty { get; set; }
+        public string TestProperty { get; set; } = string.Empty;
     }
 }
